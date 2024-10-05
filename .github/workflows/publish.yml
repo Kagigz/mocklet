@@ -24,11 +24,14 @@ jobs:
 
       - name: Run tests
         run: npm test --runInBand
+        continue-on-error: false
 
       - name: Publish to npm
         run: npm publish
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+        if: success()
 
       - name: Create Git tag
         run: git tag v$(node -p "require('./package.json').version") && git push origin --tags
+        if: success()
