@@ -4,6 +4,14 @@ Mocklet is a command-line tool that lets you mock any API call offline.
 
 It's a simple, lightweight server that can return pre-configured responses to simulate API endpoints, making it ideal for testing and development environments without real API connectivity.
 
+## Why mocklet?
+
+You're on the plane, the train, or just have a shitty connection... but you need to test that end-to-end flow that involves calling an external API.
+
+You could update your code to mock that API call... OR you could just use mocklet, and replace the API endpoint with your local mocklet server!
+
+Go for the effortless option - just npm install mocklet!
+
 ## Features
 
 - Mock local HTTP endpoints with ease, with one command
